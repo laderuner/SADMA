@@ -1,0 +1,621 @@
+  <div class="row" id="blockui_sample_1_portlet_body">
+	<div class="tabbable-line boxless tabbable-reversed">
+		<ul class="nav nav-tabs">
+			<li class="active" id="tabId00">
+				<a href="#tab_0" data-toggle="tab" >Crear Orden </a>
+			</li>
+			<li class="" id="tabId03">
+				<a href="#tab_3" data-toggle="tab" >Items Ordenes </a>
+			</li>
+			 <li class="" id="tabId02">
+				<a href="#tab_2" data-toggle="tab" >Cancelar Orden </a>
+			</li>
+			
+			<li class="" id="tabId04">
+				<a href="#tab_4" data-toggle="tab" >Consulta de Ordenes </a>
+			</li>
+		</ul>
+		<div class="tab-content" style="padding: 0px 0;" >
+			<div class="tab-pane active" id="tab_0">
+				<div class="portlet-body form" >
+				<div id="addOrd" style="display:none;">
+					<form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate" autocomplete="off">
+						<div class="form-body" >
+							<h3 class="form-section" style="margin: 0px;">Ordenes</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+												
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="date" class="form-control" id="date" name="date" ng-model="orders.date">
+										<label for="form_control_1"><span class="required" aria-required="true"></span></label>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										 <div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="number" class="form-control" id="amount" name="name" ng-model="orders.amount">
+										<label for="form_control_1" id="labelAmount">Cantidad<span class="required" aria-required="true">*</span></label>
+										</div>   
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+												
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="number" class="form-control" id="tax" name="name" ng-model="orders.tax">
+										<label for="form_control_1" id="labelTax">Impuesto<span class="required" aria-required="true">*</span></label>
+										
+										</div>
+
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										 <div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="number" class="form-control" id="total" name="number" ng-model="orders.total">
+										<label for="form_control_1" id="labelTotal">Total<span class="required" aria-required="true">*</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="comments" name="name" ng-model="orders.comments">
+										<label for="form_control_1" id="labelComments">Comentarios<span class="required" aria-required="true">*</span></label>
+										</div> 
+											
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="form-group">
+
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="latfrom" name="name" ng-model="orders.latfrom"> 
+										<label for="form_control_1" id="labelLatfrom">Latitud Desde<span class="required" aria-required="true">*</span></label>
+										</div>                                                                                                                                        
+									</div>
+								</div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+
+									   <div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="lngfrom" name="name" ng-model="orders.lngfrom"> 
+										<label for="form_control_1" id="labelLngfrom">Longitud Desde<span class="required" aria-required="true">*</span></label>
+										</div>   
+
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="latto" name="name" ng-model="orders.latto">
+										<label for="form_control_1" id="labelLatto">Latitud Hasta<span class="required" aria-required="true">*</span></label>
+										</div>
+								</div>
+							</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="lngto" name="name" ng-model="orders.lngto">
+										<label for="form_control_1" id="labelLngto">Latitud Hasta <span class="required" aria-required="true">*</span></label>
+										</div> 
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+											<input type="number" class="form-control" id="packagesquantity" name="number"ng-model="orders.packagesquantity">
+											<label for="form_control_1" id="labelPackagesquantity">Cantidad de Paquetes<span class="required" aria-required="true">*</span></label>
+										</div> 
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+											<input type="text" class="form-control" id="address" name="name" ng-model="orders.address">
+											<label for="form_control_1" id="labelAddress">Dirección de Entrega<span class="required" aria-required="true">*</span></label>
+											<span class="help-block"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+											<input type="number" class="form-control" id="addressnumber" name="number" ng-model="orders.addressnumber">
+											<label for="form_control_1" id="labelAddressnumber">Número<span class="required" aria-required="true">*</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 ">
+									<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+											<input type="number" class="form-control" id="reference" name="number" ng-model="orders.reference">
+											<label for="form_control_1" id="labelReference">Número de Referencia<span class="required" aria-required="true">*</span></label>
+											<span class="help-block"></span>
+										</div> 
+									</div>
+								</div>
+							</div>
+							<!-- ITEM ORDEN -->
+							
+							
+							
+							
+						</div>
+
+						<div class="form-actions right">
+							<button type="button" class="btn default" onclick="showOrd(false);">Cancelar</button>
+							<button type="button" class="btn blue" ng-click="registerOrders()" id="registerOrders" >
+							<i class="fa fa-check" ></i> Crear Orden</button>
+							<button type="button" class="btn blue" ng-click="updateOrder()" id="updateOrder">
+							<i class="fa fa-check" ></i> Actualizar Orden</button>
+						</div>
+					</form>
+					</div>
+					<div class="row">
+                        <div class="col-md-12">
+                            <div class="portlet light bordered">
+                                <div class="portlet-title">
+                                    <div class="caption font-dark">
+                                        <i class="icon-home font-dark"></i>
+                                        <span class="caption-subject bold uppercase">Ordenes asociadas</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="table-toolbar">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="btn-group">
+                                                <button id="sample_editable_1_new" class="btn sbold green" onclick="showOrd();"> <span id="mostrar">Agregar</span>
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="btn-group pull-right">
+                                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Herramientas
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-print"></i> Imprimir </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-file-pdf-o"></i> Guardar como PDF </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-file-excel-o"></i> Exportar a Excel </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-scrollable">
+                                    <table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="orders" role="grid">
+                                        <thead>
+                                            <tr>
+                                               
+												<th>Fecha</th>
+												
+												<th>Cantidad</th>
+												<th>Impuesto</th>
+												<th>Total</th>
+												<th>Comentarios</th>
+												<th>Prioridad</th>
+												<th>Lat desde</th>
+												<th>Long desde</th>
+												<th>Lat hasta</th>
+												<th>Long hasta</th>
+												<th>Cant Paquetes</th>
+												<th>Núm referencia</th>
+												<th>Domicilio</th>
+												<th>Altura</th>
+												<th>Código Postal</th>
+												<th>Acciones</th>
+
+												
+												
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+											<tr class="odd gradeX" ng-repeat="c in listOrders" >
+												
+												<td>{{c.date}}</td>
+												<td>{{c.amount}}</td>
+												<td>{{c.tax}}</td>
+												<td>{{c.total}}</td>
+												<td>{{c.comments}}</td>
+												<td>{{c.priorityid}}</td>
+												<td>{{c.latfrom}}</td>
+												<td>{{c.lngfrom}}</td>
+												<td>{{c.latto}}</td>
+												<td>{{c.lngto}}</td>
+												<td>{{c.packagesquantity}}</td>
+												<td>{{c.reference}}</td>
+												<td>{{c.street}}</td>
+												<td>{{c.number}}</td>
+												<td>{{c.locationid}}</td>
+												
+												<td>
+                                                    <span class="label label-sm label-success editDir " ng-click="loadFormOrder(c.number,c.date,c.amount,c.tax,c.total,c.comments,c.priorityid,c.latfrom,c.lngfrom,c.latto,c.lngto,c.packagesquantity,c.reference,c.street,c.number,c.locationid);"> Editar </span>&nbsp;
+													<span class="label label-sm label-warning" ng-click="deleteOrder(c.number)" id="demo_3"> Borrar </span>
+                                                </td>
+											</tr>
+											
+											
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+
+
+						  <div class="tab-pane" id="tab_2"><div class="portlet-body form">
+						   <form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate">
+						   <div class="form-body">
+							<h3 class="form-section" style="margin: 0px;">Cancelar Orden  </h3>
+							</div>  
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+												
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="number" class="form-control" id="ordernumber" name="number" ng-model="orders.ordernumber">
+										<label for="form_control_1">Número de Orden<span class="required" aria-required="true"></span></label>
+										<!-- <span class="help-block">dd/mm/aaaa</span> -->                                                                    
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									
+									<div class="form-group">
+										 <div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="text" class="form-control" id="reason" name="number" ng-model="orders.reason">
+										<label for="form_control_1">Razón<span class="required" aria-required="true"></span></label>
+										
+										</div>   
+
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="form-actions right">
+							<button type="button" class="btn default">Cancelar</button>
+							<button type="button" class="btn blue" 
+							ng-click="cancelOrder()">
+							<i class="fa fa-check"></i> Aplicar</button>                                                         
+							</div>
+
+						   </form>
+						  </div>
+						  </div>
+
+						  <div class="tab-pane" id="tab_3"><div class="portlet-body form">
+						   <form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate">
+						   <!-- <div class="form-body">
+							<h3 class="form-section" style="margin: 0px;">Items Ordenes  </h3>
+							</div>  --> 
+
+							<!-- ITEM ORDEN -->
+							<div class="row">
+								<div class="portlet-body form">
+									<div id="addItemOrd" style="display:none;">
+									<form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate">
+										<div class="form-body">
+											<h3 class="form-section" style="margin: 0px;">
+												<i class="icon-plus"></i>
+												Agregar/editar item
+											</h3>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="form-group form-md-line-input form-md-floating-label has-success">
+															<input type="text" class="form-control" id="itemDescription" name="name" ng-model="orders.descrip">
+															<label for="form_control_1" id="labelDescription">Descripción<span class="required" aria-required="true">*</span></label>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="form-group form-md-line-input form-md-floating-label has-success">
+															<input type="number" class="form-control" id="quantity" name="name" ng-model="orders.quantity">
+															<label for="form_control_1" id="labelQuantity">Cantidad<span class="required" aria-required="true">*</span></label>
+														</div>   
+													</div>
+												</div>
+												
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="form-group form-md-line-input form-md-floating-label has-success">
+															<input type="number" class="form-control" id="insurance" name="number" ng-model="orders.insurance">
+															<label for="form_control_1" id="labelInsurance">Seguro<span class="required" aria-required="true">*</span></label>
+														</div> 
+													</div>
+												</div>
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<div class="form-group form-md-line-input form-md-floating-label has-success">
+															<input type="text" class="form-control" id="price" name="name" ng-model="orders.price">
+															<label for="form_control_1"  id="labelPrice">Valor<span class="required" aria-required="true">*</span></label>									
+														</div>
+														
+													</div>
+												</div>
+												
+											</div>
+																					
+											
+											<div class="row">
+												<div class="col-md-12 ">
+													<div class="form-group">
+														
+														<div class="form-group form-md-line-input form-md-floating-label has-success">
+															<input type="text" class="form-control" id="pkgsizeid" name="number" ng-model="orders.pkgsizeid">
+															<label for="form_control_1" id="labelPkgsizeid">Tamaño<span class="required" aria-required="true">*</span></label>
+														</div> 
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="form-actions right">
+											<button type="button" class="btn default" onclick="showAddItem(false);">Cancelar</button>
+											<button type="button" class="btn blue"id="addItmeOrders" ng-click="createOrderDetail()" >
+											<i class="fa fa-check" ></i>Agregar item </button>
+											<button type="button" class="btn blue"id="updateItmeOrders" ng-click="updateOrderDetail()" >
+											<i class="fa fa-check" ></i>Actualizar </button>
+										</div>
+									</form>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="portlet light bordered">
+										<div class="portlet-title">
+											<div class="caption font-dark">
+												<i class="icon-cubes font-dark"></i>
+												<span class="caption-subject bold uppercase">Items de la Orden</span>
+											</div>
+										</div>
+										<div class="portlet-body">
+											<div class="table-toolbar">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="btn-group">
+															<button id="sample_editable_1_new" class="btn sbold green" onclick="showAddItem();"> Agregar/editar item
+																<i class="fa fa-plus"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1 orders" >
+												<thead>
+													<tr>
+														<th>
+															<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+														</th>
+														<th> Item </th>
+														<th> Descripción </th>
+														<th> Cantidad </th>
+														<th> Seguro </th>
+														<th> Valor </th>
+														<th> Tamaño </th>
+														<th> Acciones </th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="odd gradeX" ng-repeat="x in listItemOrders">
+														<td>
+															<input type="checkbox" class="checkboxes" value="1" />
+															<!-- <input type="text" value="{{x.ordernumber}}" id="ordernumber" ng-model="orders.ordernumber"> -->
+														</td>
+														<td>
+															{{ x.item }}
+														</td>
+														<td>
+															{{ x.description }}
+														</td>
+														<td>
+															{{ x.quantity }}
+														</td>
+														<td>
+															$ {{ x.insurance }}
+														</td>
+														<td>
+															$ {{ x.price }}
+														</td>
+														<td>
+															{{ x.pkgsizeid }}
+														</td>
+														<td id="edit">
+															<span class="label label-sm label-success editDir " ng-click="loadFormOrderDetail(x.ordernumber, x.item, x.description, x.quantity,x.insurance,x.price,x.pkgsizeid);" > Editar </span>&nbsp;
+															<!-- <span class="label label-sm label-warning" id="delete" ng-click="deleteOrder(x.ordernumber)"> Borrar </span> -->
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						   </form>
+						  </div>
+						  </div>
+													
+						  <div class="tab-pane" id="tab_4"><div class="portlet-body form">
+						  <form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate">
+						   <div class="form-body">
+							<h3 class="form-section" style="margin: 0px;">Consultas de Ordenes   </h3>
+							</div>  
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+												
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+										<input type="number" class="form-control" id="ordernumber" name="name" ng-model="orders.ordernumber">
+										<label for="form_control_1">Número de Orden</label>
+										<span class="help-block">Filtro</span>                                                  
+										</div>
+									</div>
+								</div>
+
+								<div class="form-actions right">
+							
+							<button type="button" class="btn blue" ng-click="queryOrder()">
+							<i class="fa fa-check"></i> Filtrar</button>                                                         
+							</div>
+							   
+							</div>
+							<!-- row --> 
+							<hr>
+							<div class="row" id="ShowOrders">
+							<div class="col-md-12 col-sm-12">
+							<div class="portlet grey-cascade box">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="fa fa-cogs"></i>Ordenes </div>
+								   <!--  <div class="actions">
+										<a href="javascript:;" class="btn btn-default btn-sm">
+											<i class="fa fa-pencil"></i> <i class="icon-user"></i> </a>
+									</div> -->
+								</div>
+								<div class="portlet-body">
+									<div class="table-responsive">
+
+									
+							<div class="col-md-6 col-sm-12" >
+                                                        <div class="portlet blue-hoki box">
+                                                            <div class="portlet-title">
+                                                                <div class="caption">
+                                                                    <i class="fa fa-cogs"></i>Informacón de Ordenes </div>
+                                                                
+                                                            </div>
+                                                            <div class="portlet-body" ng-model="listQueryOrders">
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Número: </div>
+                                                                    <div class="col-md-7 value"> {{status.number}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Fecha: </div>
+                                                                    <div class="col-md-7 value"> {{status.date}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Carrier ID: </div>
+                                                                    <div class="col-md-7 value"> {{status.carrierid}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Shippers ID: </div>
+                                                                    <div class="col-md-7 value"> {{status.shipperid}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Monto: </div>
+                                                                    <div class="col-md-7 value"> {{status.tax}} </div>
+                                                                   
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Impuesto: </div>
+                                                                    <div class="col-md-7 value"> {{status.total}} </div>
+                                                                </div>
+
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Comentarios: </div>
+                                                                    <div class="col-md-7 value"> {{status.comments}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Cantidad de Paquetes: </div>
+                                                                    <div class="col-md-7 value"> {{status.packagesquantity}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Número de Referencia: </div>
+                                                                    <div class="col-md-7 value"> {{status.reference}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Domicilio: </div>
+                                                                    <div class="col-md-7 value"> {{status.street}} </div>
+                                                                    <div class="col-md-5 name"> Altura: </div>
+                                                                    <div class="col-md-7 value"> {{status.number}} </div>
+                                                                </div>
+                                                                <div class="row static-info">
+                                                                    <div class="col-md-5 name"> Código Postal: </div>
+                                                                    <div class="col-md-7 value"> {{status.locationid}} </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                            <!-- BEGIN MARKERS PORTLET-->
+                            <div class="portlet light portlet-fit bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        
+                                        <span class="caption-subject font-blue bold uppercase">Mapa</span>
+                                       <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d434553.41572298005!2d-64.96583459144613!3d-31.689974143093906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x942cd4a28a37a1a9%3A0x22605b95a479b364!2sMart%C3%ADn+Torres+129%2C+Villa+Dolores%2C+C%C3%B3rdoba!3m2!1d-31.944315099999997!2d-65.1816848!4m5!1s0x9432a286a1a18663%3A0x687990644b8dc573!2sSan+Juan+Bv.+255%2C+C%C3%B3rdoba!3m2!1d-31.4200695!2d-64.1894762!5e0!3m2!1ses!2sar!4v1453940887719" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="portlet-body">
+
+                                    <div id="gmap_marker" class="gmaps"> </div>
+                                </div>
+                            </div>
+                            <!-- END MARKERS PORTLET-->
+                       
+										
+									</div>
+								</div>
+							</div>
+						</div>  
+						</div> 
+
+						   </form>
+						  </div>
+						  </div>
+						  
+						  
+
+
+						  </div>
+
+						  </div>
+						   </div>
