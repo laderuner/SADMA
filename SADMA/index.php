@@ -113,6 +113,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div id="controlHora" style="display:none">
 						<?php include 'controlHora.html';?>
                     </div>
+                    <div id="controlMaterial" style="display:none">
+						<?php include 'materialAeronautico.html';?>
+                    </div>
 
 				</div>
                 <!-- END CONTENT BODY -->
