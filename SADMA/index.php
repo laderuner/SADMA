@@ -312,12 +312,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
         $("#showPersonal").click(function(){
 				$("#controlHora").hide();
+        $("#controlMaterial").hide();
 				$("#personal").show();
 
 
 				$( "#optPersonal" ).addClass( "active" ).addClass( "open" );
 				$( "#optControlHoras" ).removeClass( "active" ).removeClass( "open" );
 				$( "#optOthers" ).removeClass( "active" ).removeClass( "open" );
+        $( "#optControlHoras" ).addClass( "active" ).addClass( "open" );
         });
 
         //Mostrar Orders / Oculta Ordes
@@ -327,12 +329,25 @@ License: You must have a valid license purchased only from themeforest(the above
 
         $("#showControlHoras").click(function(){
 				$("#personal").hide();
+        $("#controlMaterial").hide();
 				$("#controlHora").show();
 
 				$( "#optControlHoras" ).addClass( "active" ).addClass( "open" );
 				$( "#optPersonal" ).removeClass( "active" ).removeClass( "open" );
 				$( "#optOthers" ).removeClass( "active" ).removeClass( "open" );
+        $( "#optMaterial" ).removeClass( "active" ).removeClass( "open" );
          });
+
+         $("#showMaterial").click(function(){
+ 				$("#personal").hide();
+ 				$("#controlHora").hide();
+        $("#controlMaterial").show();
+
+ 				$( "#optMaterial" ).addClass( "active" ).addClass( "open" );
+        $( "#optControlHoras" ).removeClass( "active" ).removeClass( "open" );
+ 				$( "#optPersonal" ).removeClass( "active" ).removeClass( "open" );
+ 				$( "#optOthers" ).removeClass( "active" ).removeClass( "open" );
+          });
 
         $("#hidePersonal").click(function(){
 				$("#personal").hide();});
@@ -408,70 +423,61 @@ License: You must have a valid license purchased only from themeforest(the above
 			//------------------------------------------
 			// End -
 			//------------------------------------------
-
-            //MUESTRA TAB CREAR ORDENES
-            $("#activeTabCreateOrders").click(function(){
-				$( "#tabId01" ).removeClass( "active" );
-				$( "#tabId02" ).removeClass( "active" );
-				$( "#tabId03" ).removeClass( "active" );
-				$( "#tabId04" ).removeClass( "active" );
-				$( "#tabId05" ).removeClass( "active" );
-
-				$( "#tabId00" ).addClass( "active" );
-            });
-            //MUESTRA TAB CREAR DETALLES DE ORDENES
-            $("#activeTabOrderDetail").click(function(){
-            $( "#tabId00" ).removeClass( "active" );
-            $( "#tabId02" ).removeClass( "active" );
-            $( "#tabId03" ).removeClass( "active" );
-            $( "#tabId04" ).removeClass( "active" );
-            $( "#tabId05" ).removeClass( "active" );
-
-            $( "#tabId01" ).addClass( "active" );
-            });
-            //MUESTRA TAB CANCELA ORDENES
-            $("#activeTabCancelOrder").click(function(){
-            $( "#tabId00" ).removeClass( "active" );
-            $( "#tabId01" ).removeClass( "active" );
-            $( "#tabId03" ).removeClass( "active" );
-            $( "#tabId04" ).removeClass( "active" );
-            $( "#tabId05" ).removeClass( "active" );
-
-            $( "#tabId02" ).addClass( "active" );
-            });
-            //MUESTRA TAB ELIMINAR ORDENES
-            $("#activeTabDeleteOrder").click(function(){
-            $( "#tabId00" ).removeClass( "active" );
-            $( "#tabId01" ).removeClass( "active" );
-            $( "#tabId02" ).removeClass( "active" );
-            $( "#tabId03" ).removeClass( "active" );
-            $( "#tabId04" ).removeClass( "active" );
-
-            $( "#tabId03" ).addClass( "active" );
-            });
-            //MUESTRA TAB CONSULTAS ORDENES
-            $("#activeTabQueryOrders").click(function(){
-            $( "#tabId00" ).removeClass( "active" );
-            $( "#tabId01" ).removeClass( "active" );
-            $( "#tabId02" ).removeClass( "active" );
-            $( "#tabId03" ).removeClass( "active" );
-            $( "#tabId05" ).removeClass( "active" );
-
-            $( "#tabId04" ).addClass( "active" );
-            });
-            //MUESTRA TAB CONSULTAS DETALLES ORDENES
-            $("#activeTabQueryOrderDetail").click(function(){
-            $( "#tabId01" ).removeClass( "active" );
-            $( "#tabId02" ).removeClass( "active" );
-            $( "#tabId03" ).removeClass( "active" );
-            $( "#tabId04" ).removeClass( "active" );
-            $( "#tabId00" ).removeClass( "active" );
-
-            $( "#tabId05" ).addClass( "active" );
-            });
-
-
-            });
+      //MUESTRA TAB CREAR ORDENES
+                  $("#activeTabCreateOrders").click(function(){
+      				$( "#tabId01" ).removeClass( "active" );
+      				$( "#tabId02" ).removeClass( "active" );
+      				$( "#tabId03" ).removeClass( "active" );
+      				$( "#tabId04" ).removeClass( "active" );
+      				$( "#tabId05" ).removeClass( "active" );
+      				$( "#tabId00" ).addClass( "active" );
+                  });
+                  //MUESTRA TAB CREAR DETALLES DE ORDENES
+                  $("#activeTabOrderDetail").click(function(){
+                  $( "#tabId00" ).removeClass( "active" );
+                  $( "#tabId02" ).removeClass( "active" );
+                  $( "#tabId03" ).removeClass( "active" );
+                  $( "#tabId04" ).removeClass( "active" );
+                  $( "#tabId05" ).removeClass( "active" );
+                  $( "#tabId01" ).addClass( "active" );
+                  });
+                  //MUESTRA TAB CANCELA ORDENES
+                  $("#activeTabCancelOrder").click(function(){
+                  $( "#tabId00" ).removeClass( "active" );
+                  $( "#tabId01" ).removeClass( "active" );
+                  $( "#tabId03" ).removeClass( "active" );
+                  $( "#tabId04" ).removeClass( "active" );
+                  $( "#tabId05" ).removeClass( "active" );
+                  $( "#tabId02" ).addClass( "active" );
+                  });
+      //MUESTRA TAB ELIMINAR ORDENES
+                  $("#activeTabDeleteOrder").click(function(){
+                  $( "#tabId00" ).removeClass( "active" );
+                  $( "#tabId01" ).removeClass( "active" );
+                  $( "#tabId02" ).removeClass( "active" );
+                  $( "#tabId03" ).removeClass( "active" );
+                  $( "#tabId04" ).removeClass( "active" );
+                  $( "#tabId03" ).addClass( "active" );
+                  });
+                  //MUESTRA TAB CONSULTAS ORDENES
+                  $("#activeTabQueryOrders").click(function(){
+                  $( "#tabId00" ).removeClass( "active" );
+                  $( "#tabId01" ).removeClass( "active" );
+                  $( "#tabId02" ).removeClass( "active" );
+                  $( "#tabId03" ).removeClass( "active" );
+                  $( "#tabId05" ).removeClass( "active" );
+                  $( "#tabId04" ).addClass( "active" );
+                  });
+                  //MUESTRA TAB CONSULTAS DETALLES ORDENES
+                  $("#activeTabQueryOrderDetail").click(function(){
+                  $( "#tabId01" ).removeClass( "active" );
+                  $( "#tabId02" ).removeClass( "active" );
+                  $( "#tabId03" ).removeClass( "active" );
+                  $( "#tabId04" ).removeClass( "active" );
+                  $( "#tabId00" ).removeClass( "active" );
+                  $( "#tabId05" ).addClass( "active" );
+                  });
+                  });
         </script>
 
         <script>
