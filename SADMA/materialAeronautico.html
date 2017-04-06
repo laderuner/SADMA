@@ -6,7 +6,9 @@
                                 <li class="">
                                     <a href="#tabMaterial" data-toggle="tab" aria-expanded="false">Material Aeronáutico</a>
                                 </li>
-
+																<li class="">
+                                    <a href="#tabHorasMaterial" data-toggle="tab" aria-expanded="true">Horas de vuelo</a>
+                                </li>
                                 <li class="">
                                     <a href="#tabReportesMaterial" data-toggle="tab" aria-expanded="true">Reportes Material</a>
                                 </li>
@@ -175,7 +177,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                                <div class="col-md-3">
                                                               <div class="form-group">
                                                                       <div class="form-group form-md-line-input form-md-floating-label has-success">
@@ -214,6 +216,66 @@
                             </div>
                         </div>
                     </div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="tabHorasMaterial">
+				<div class="portlet-body form">
+					<form method="post" class="horizontal-form" id="form_sample_2" novalidate="novalidate">
+						<h3 class="form-section" style="margin: 0px;">Horas de Vuelo</h3>
+						<div class="form-body">
+
+					<div class="row">
+						<div class="col-md-3">
+								<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+												<input type="text" class="form-control" id="hours" name="hours" >
+												<label for="form_control_1">Horas<span class="required" aria-required="true">*</span></label>
+										</div>
+								</div>
+						</div>
+						<div class="col-md-3">
+								<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+												<input type="text" class="form-control" id="landing" name="landing" >
+												<label for="form_control_1">Aterrizajes<span class="required" aria-required="true">*</span></label>
+										</div>
+								</div>
+						</div>
+						<div class="col-md-3">
+								<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+												<input type="text" class="form-control" id="inspectionDate" name="inspectionDate" >
+												<label for="form_control_1">Fecha de Inspeción</label>
+										</div>
+								</div>
+						</div>
+						<div class="col-md-3">
+								<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+												<input type="text" class="form-control" id="legal" name="legal" >
+												<label for="form_control_1">Estado Legal</label>
+										</div>
+								</div>
+						</div>
+						<div class="col-md-3">
+								<div class="form-group">
+										<div class="form-group form-md-line-input form-md-floating-label has-success">
+												<input type="text" class="form-control" id="maintenance" name="maintenance" >
+												<label for="form_control_1">Mantenimiento</label>
+										</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3">
+
+						</div>
+					</div>
+
+				</div>
+					</form>
 				</div>
 			</div>
 
