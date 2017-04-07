@@ -315,15 +315,12 @@
 
 																			<tr>
 
-									<th> Fecha </th>
-									<th> Finalidad </th>
-									<th> Hs Salida </th>
-									<th> Desde </th>
-									<th> Hasta </th>
-									<th> Hs Llegada </th>
-									<th> Aeropuerto </th>
-									<th> Piloto </th>
-									<th> Co-Piloto </th>
+									<th> Marca </th>
+									<th> Nombre </th>
+									<th> Año </th>
+									<th> Matricula </th>
+									<th> Año Matricula </th>
+									
 
 
 
@@ -332,15 +329,12 @@
 																	<tbody>
 								<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
 
-									<td>{{c.date}}</td>
-									<td>{{c.finality}}</td>
-									<td>{{c.departure}}</td>
-									<td>{{c.from}}</td>
-									<td>{{c.to}}</td>
-									<td>{{c.arrival}}</td>
-									<td>{{c.airport}}</td>
-									<td>{{c.pilot}}</td>
-									<td>{{c.coPilot}}</td>
+									<td>{{m.brand}}</td>
+									<td>{{m.namePlane}}</td>
+									<td>{{m.year}}</td>
+									<td>{{m.registration}}</td>
+									<td>{{m.registrationYear}}</td>
+
 
 									<td>
 																							<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
@@ -357,17 +351,18 @@
 																			<tr>
 
 
-									<th> De Dia </th>
-									<th> Nocturno </th>
-									<th> Aterrizajes </th>
-									<th> Instrucción </th>
-									<th> Multi-Motor </th>
-									<th> Reactor </th>
-									<th> Turbo Helice </th>
-									<th> Aero-Aplicador </th>
-									<th> Real </th>
-									<th> Tripulación </th>
-									<th> Ultimo Vuelo </th>
+																				<th> Envergadura </th>
+																				<th> Long </th>
+																				<th> Peso Max Desp </th>
+																				<th> Peso Vacio </th>
+																				<th> Velocidad Crucero </th>
+																				<th> Techo de Servicio </th>
+																				<th> Carrera de Despegue </th>
+																				<th> Carrera de Aterrizaje </th>
+																				<th> Motor </th>
+																				<th> HP </th>
+																				<th> Max Combustible </th>
+																				<th> Hélice </th>
 
 
 																			</tr>
@@ -376,17 +371,18 @@
 								<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
 
 
-									<td>{{c.atDay}}</td>
-									<td>{{c.nightly}}</td>
-									<td>{{c.landings}}</td>
-									<td>{{c.Instruction}}</td>
-									<td>{{c.multi-engine}}</td>
-									<td>{{c.reactor}}</td>
-									<td>{{c.turbo-propeller}}</td>
-									<td>{{c.aeroApplication}}</td>
-									<td>{{c.real}}</td>
-									<td>{{c.tripulation}}</td>
-									<td>{{c.lastFlight}}</td>
+									<td>{{m.wingspan}}</td>
+									<td>{{m.longPlane}}</td>
+									<td>{{m.maxTakeOff}}</td>
+									<td>{{m.emptyWeight}}</td>
+									<td>{{m.cruiseSpeed}}</td>
+									<td>{{m.serviceCeiling}}</td>
+									<td>{{m.takeoffRace}}</td>
+									<td>{{m.landingRace}}</td>
+									<td>{{m.engine}}</td>
+									<td>{{m.enginePower}}</td>
+									<td>{{m.fuelCapacity}}</td>
+									<td>{{m.propeller}}</td>
 									<td>
 																							<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
 										<span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span>
