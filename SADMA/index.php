@@ -186,13 +186,13 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="assets/pages/scripts/ui-blockui.js" type="text/javascript"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-        <script type="text/javascript" src="js/angularCustomers.js"></script>
+        <script type="text/javascript" src="jsAngular/personal.js"></script>
 
 
 
 
 
-        <script type="text/javascript" src="js/epo_register.js"></script>
+        <!-- <script type="text/javascript" src="js/epo_register.js"></script> -->
 
         <!-- END THEME LAYOUT SCRIPTS -->
 

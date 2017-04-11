@@ -1,0 +1,19 @@
+{
+		"last_name":"Arce",
+		"name":"Francisco Javier",
+		"address":"Martin Torres 129",
+		"city":"Villa Dolores",
+		"region":"Córdoba",
+		"zip":"5870",
+		"country":"Argentina",
+		"dni":"30180270",
+		"birthdate":"27/08/1983",
+		"tel":"+543544428936",
+		"cel":"+543544408291",
+		"mail":"sonnik42@hotmail.com",
+		"user":"sonnik42@hotmail.com",
+		"role":"admin",
+		"status":"activo",
+		"lapso":"activo"
+		
+}
