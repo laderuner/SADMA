@@ -218,7 +218,7 @@
                                                                 <div class="form-group">
 																																	<p></p>
 																																	  <div class="form-group form-md-line-input has-info">
-																																					<select class="form-control" id="role">
+																																					<select class="form-control" id="role" ng-model="personal.role">
 																																							<option value=""></option>
 																																							<option value="admin">Admin</option>
 																																							<option value="normal">Normal</option>
@@ -260,8 +260,9 @@
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
 																																	<div class="form-group form-md-line-input has-info">
-																																			<select class="form-control" id="status">
+																																			<select class="form-control" id="status" ng-model="personal.status">
 																																					<option value=""></option>
+																																					<option value="activo">Activo</option>
 																																					<option value="suspension">Suspensión</option>
 																																					<option value="sefeated">Vencido</option>
 																																					<option value="deprecated">Dado de Baja</option>
@@ -279,7 +280,7 @@
 																																		<div class="form-group">
 																																			<div class="form-group form-md-line-input has-info">
 		                                                                        <div class="form-group form-md-line-input form-md-floating-label has-success">
-		                                                                            <input type="text" class="form-control" id="lapso" name="lapso">
+		                                                                            <input type="text" class="form-control" id="lapso" name="lapso" ng-model="personal.lapso">
 		                                                                            <label for="form_control_1">Lapso tiempo sin volar<span class="" aria-required="true"></span></label>
 		                                                                        </div>
 																																					</div>
