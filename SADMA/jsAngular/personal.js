@@ -10,8 +10,9 @@ app.controller("angularControl", function ($scope, $http) {
 										$('#tabPermisos').find('div.form-group.form-md-line-input.form-md-floating-label.has-success').removeClass('form-md-floating-label');
                     });
 		// $('#tabPermisos').find('div.form-group.form-md-line-input.form-md-floating-label.has-success').removeClass('form-md-floating-label');
-
-
-
-
+		var resPersonalList = $http.get("http://localhost:8080/personalList");
+					 resPersonalList.success(
+									function (status) {
+									$scope.personalList = status;
+									});
 });

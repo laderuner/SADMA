@@ -359,7 +359,7 @@
 																			                                            </div>
 																			                                        </div>
 																			                                    </div>
-																			                                    <table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="customerAddresses" >
+																			                                    <table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="personalList" >
 																			                                        <thead>
 																			                                            <tr>
 
@@ -376,15 +376,15 @@
 																			                                            </tr>
 																			                                        </thead>
 																			                                        <tbody>
-																														<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
+																														<tr class="odd gradeX" ng-repeat="c in personalList" >
 
-																															<td>{{c.description}}</td>
-																															<td>{{c.street}}</td>
-																															<td>{{c.number}}</td>
-																															<td>{{c.floor}}</td>
-																															<td>{{c.floorid}}</td>
-																															<td>{{c.locationid}}</td>
-																															<td>{{c.loc_id}}</td>
+																															<td>{{c.hours}}</td>
+																															<td>{{c.plane}}</td>
+																															<td>{{c.task}}</td>
+																															<td>{{c.access}}</td>
+																															<td>{{c.license}}</td>
+																															<td>{{c.authorization}}</td>
+																															<td>{{c.status}}</td>
 
 																															<td>
 																			                                                    <span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
