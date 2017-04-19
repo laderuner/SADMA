@@ -26,7 +26,7 @@
 																															<div class="col-md-3">
 																																	<div class="form-group">
 																																			<div class="form-group form-md-line-input form-md-floating-label has-success">
-																																					<input type="text" class="form-control" id="dni" name="dni" >
+																																					<input type="text" class="form-control" id="dni" name="dni" ng-model="libroHoras.dni" >
 																																					<label for="form_control_1">ID Piloto (DNI)<span class="required" aria-required="true">*</span></label>
 																																			</div>
 																																	</div>
@@ -35,7 +35,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="date" name="date" >
+                                                                            <input type="text" class="form-control" id="date" name="date" ng-model="libroHoras.date" >
                                                                             <label for="form_control_1">Fecha<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -44,7 +44,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="FLIGHT_TYPE" name="FLIGHT_TYPE" >
+                                                                            <input type="text" class="form-control" id="FLIGHT_TYPE" name="FLIGHT_TYPE" ng-model="libroHoras.FLIGHT_TYPE" >
                                                                             <label for="form_control_1">Finalidad<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -60,7 +60,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="DEPARTURE_TIME" name="DEPARTURE_TIME" >
+                                                                            <input type="text" class="form-control" id="DEPARTURE_TIME" name="DEPARTURE_TIME" ng-model="libroHoras.DEPARTURE_TIME">
                                                                             <label for="form_control_1">Hora de Salida<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -69,7 +69,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="FROM" name="FROM" >
+                                                                            <input type="text" class="form-control" id="FROM" name="FROM" ng-model="libroHoras.FROM">
                                                                             <label for="form_control_1">Desde<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -78,7 +78,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="TO" name="TO" >
+                                                                            <input type="text" class="form-control" id="TO" name="TO" ng-model="libroHoras.TO">
                                                                             <label for="form_control_1">Hasta<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -87,7 +87,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="ARRIVAL_TIME" name="ARRIVAL_TIME" >
+                                                                            <input type="text" class="form-control" id="ARRIVAL_TIME" name="ARRIVAL_TIME" ng-model="libroHoras.ARRIVAL_TIME">
                                                                             <label for="form_control_1">Hora de llegada<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -97,7 +97,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="airport" name="airport" >
+                                                                            <input type="text" class="form-control" id="airport" name="airport" ng-model="libroHoras.airport">
                                                                             <label for="form_control_1">Aeropuerto<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -105,7 +105,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="pilot" name="pilot" >
+                                                                            <input type="text" class="form-control" id="pilot" name="pilot" ng-model="libroHoras.pilot">
                                                                             <label for="form_control_1">Piloto<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -113,7 +113,7 @@
                                                                 <div class="col-md-3">
                                                                     <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="co-pilot" name="co-pilot" >
+                                                                            <input type="text" class="form-control" id="co-pilot" name="co-pilot" ng-model="libroHoras.co-pilot">
                                                                             <label for="form_control_1">Co-Piloto<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -128,7 +128,7 @@
                                                              <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="airport-day" name="airport-day" >
+                                                                            <input type="text" class="form-control" id="airport-day" name="airport-day" ng-model="libroHoras.airport-day">
                                                                             <label for="form_control_1">De Día<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -136,7 +136,7 @@
                                                                  <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="airport-night" name="airport-night" >
+                                                                            <input type="text" class="form-control" id="airport-night" name="airport-night" ng-model="libroHoras.airport-night">
                                                                             <label for="form_control_1">Nocturno<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -146,7 +146,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="crossing-day" name="crossing-day" >
+                                                                            <input type="text" class="form-control" id="crossing-day" name="crossing-day" ng-model="libroHoras.crossing-day">
                                                                             <label for="form_control_1">De Día<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -154,7 +154,7 @@
                                                                  <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="crossing-night" name="crossing-night" >
+                                                                            <input type="text" class="form-control" id="crossing-night" name="crossing-night" ng-model="libroHoras.crossing-night">
                                                                             <label for="form_control_1">Nocturno<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -166,7 +166,7 @@
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="landing" name="landing" >
+                                                                            <input type="text" class="form-control" id="landing" name="landing" ng-model="libroHoras.landing">
                                                                             <label for="form_control_1">Aterrizajes<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -174,7 +174,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="training" name="training" >
+                                                                            <input type="text" class="form-control" id="training" name="training" ng-model="libroHoras.training">
                                                                             <label for="form_control_1">Instrucción de Vuelo<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -182,7 +182,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="multi-motor" name="multi-motor" >
+                                                                            <input type="text" class="form-control" id="multi-motor" name="multi-motor" ng-model="libroHoras.multi-motor">
                                                                             <label for="form_control_1">Multi Motor<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -190,7 +190,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="reactor" name="reactor" >
+                                                                            <input type="text" class="form-control" id="reactor" name="reactor" ng-model="libroHoras.reactor">
                                                                             <label for="form_control_1">Reactor<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -198,7 +198,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="turbo-propeller" name="turbo-propeller" >
+                                                                            <input type="text" class="form-control" id="turbo-propeller" name="turbo-propeller" ng-model="libroHoras.turbo-propeller">
                                                                             <label for="form_control_1">Turbo Helice<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -206,7 +206,7 @@
                                                                 <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="arial-aplication" name="arial-aplication" >
+                                                                            <input type="text" class="form-control" id="arial-aplication" name="arial-aplication" ng-model="libroHoras.arial-aplication">
                                                                             <label for="form_control_1">Aero-Aplicador<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -220,7 +220,7 @@
                                                                   <div class="col-md-3">
                                                                 <div class="form-group">
                                                                         <div class="form-group form-md-line-input form-md-floating-label has-success">
-                                                                            <input type="text" class="form-control" id="real" name="real" >
+                                                                            <input type="text" class="form-control" id="real" name="real" ng-model="libroHoras.real">
                                                                             <label for="form_control_1">Real<span class="required" aria-required="true">*</span></label>
                                                                         </div>
                                                                     </div>
@@ -277,7 +277,7 @@
                                         </div>
                                     </div>
 																		<h4>Tiempos de Vuelo</h4>
-                                    <table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="customerAddresses" >
+                                    <table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="libroHorasList" >
                                         <thead>
 
 														                <tr>
@@ -297,17 +297,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-											<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
+											<tr class="odd gradeX" ng-model="libroHorasList" >
 
-												<td>{{c.date}}</td>
-												<td>{{c.finality}}</td>
-												<td>{{c.departure}}</td>
-												<td>{{c.from}}</td>
-												<td>{{c.to}}</td>
-												<td>{{c.arrival}}</td>
-												<td>{{c.airport}}</td>
-												<td>{{c.pilot}}</td>
-												<td>{{c.coPilot}}</td>
+												<td>{{libroHorasList.date}}</td>
+												<td>{{libroHorasList.FLIGHT_TYPE}}</td>
+												<td>{{libroHorasList.DEPARTURE_TIME}}</td>
+												<td>{{libroHorasList.FROM}}</td>
+												<td>{{libroHorasList.TO}}</td>
+												<td>{{libroHorasList.ARRIVAL_TIME}}</td>
+												<td>{{libroHorasList.airport}}</td>
+												<td>{{libroHorasList.pilot}}</td>
+												<td>{{libroHorasList.coPilot}}</td>
 
 												<td>
                                                     <span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
@@ -319,7 +319,7 @@
                                         </tbody>
                                     </table>
 																		<h4>Discriminación de Tiempos de vuelo</h4>
-																		<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="customerAddresses" >
+																		<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="libroHorasList" >
 																				<thead>
 																						<tr>
 
@@ -338,18 +338,18 @@
 																						</tr>
 																				</thead>
 																				<tbody>
-											<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
+											<tr class="odd gradeX" ng-model="libroHorasList" >
 
 
-												<td>{{c.atDay}}</td>
-												<td>{{c.nightly}}</td>
-												<td>{{c.landings}}</td>
-												<td>{{c.Instruction}}</td>
-												<td>{{c.multi-engine}}</td>
-												<td>{{c.reactor}}</td>
-												<td>{{c.turbo-propeller}}</td>
-												<td>{{c.aeroApplication}}</td>
-												<td>{{c.real}}</td>
+												<td>{{libroHorasList.airport-day}}</td>
+												<td>{{libroHorasList.airport-night}}</td>
+												<td>{{libroHorasList.landings}}</td>
+												<td>{{libroHorasList.crossing-day}}</td>
+												<td>{{libroHorasList.multi-engine}}</td>
+												<td>{{libroHorasList.reactor}}</td>
+												<td>{{libroHorasList.turbo-propeller}}</td>
+												<td>{{libroHorasList.arial-aplication}}</td>
+												<td>{{libroHorasList.real}}</td>
 												<td>
 																										<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
 													<span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span>
