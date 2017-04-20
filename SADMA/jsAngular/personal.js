@@ -45,4 +45,16 @@ app.controller("angularControl", function ($scope, $http) {
 											$scope.materialAeronautic = status;
 											$('#tabMaterial').find('div.form-group.form-md-line-input.form-md-floating-label.has-success').removeClass('form-md-floating-label');
 										});
+var resHorasMaterial = $http.get("http://localhost:8080/HorasMaterial");
+														resHorasMaterial.success(
+														function (status) {
+														$scope.HorasMaterial = status;
+														$('#tabHorasMaterial').find('div.form-group.form-md-line-input.form-md-floating-label.has-success').removeClass('form-md-floating-label');
+													});
+var resMaterialAeronauticList = $http.get("http://localhost:8080/materialAeronauticList");
+										resMaterialAeronauticList.success(
+										function (status) {
+										$scope.materialAeronauticList = status;
+
+		});
 });
