@@ -386,7 +386,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<h4>Tiempos de Vuelo</h4>
-															<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="customerAddresses" >
+															<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="libroVueloList" >
 																	<thead>
 
 																			<tr>
@@ -406,21 +406,21 @@
 																			</tr>
 																	</thead>
 																	<tbody>
-								<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
+								<tr class="odd gradeX" ng-repeat="c in libroVueloList">
 
 									<td>{{c.date}}</td>
-									<td>{{c.finality}}</td>
-									<td>{{c.departure}}</td>
-									<td>{{c.from}}</td>
-									<td>{{c.to}}</td>
-									<td>{{c.arrival}}</td>
+									<td>{{c.FLIGHT_TYPE}}</td>
+									<td>{{c.DEPARTURE_TIME}}</td>
+									<td>{{c.FROM}}</td>
+									<td>{{c.TO}}</td>
+									<td>{{c.ARRIVAL_TIME}}</td>
 									<td>{{c.airport}}</td>
 									<td>{{c.pilot}}</td>
 									<td>{{c.coPilot}}</td>
 
 									<td>
-																							<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
-										<span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span>
+																							<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Ver </span>&nbsp;
+										<!-- <span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span> -->
 																					</td>
 								</tr>
 
@@ -428,7 +428,7 @@
 																	</tbody>
 															</table>
 															<h4>Discriminación de Tiempos de vuelo</h4>
-															<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="customerAddresses" >
+															<table class="table table-striped table-bordered table-hover order-column" id="sample_1 " ng-model="libroVuelo" >
 																	<thead>
 																			<tr>
 
@@ -442,30 +442,29 @@
 									<th> Turbo Helice </th>
 									<th> Aero-Aplicador </th>
 									<th> Real </th>
-									<th> Tripulación </th>
+									<!-- <th> Tripulación </th> -->
 									<th> Ultimo Vuelo </th>
 
 
 																			</tr>
 																	</thead>
 																	<tbody>
-								<tr class="odd gradeX" ng-repeat="c in listCustomers.listAddress" >
+								<tr class="odd gradeX" ng-model="libroVuelo" >
 
 
-									<td>{{c.atDay}}</td>
-									<td>{{c.nightly}}</td>
-									<td>{{c.landings}}</td>
-									<td>{{c.Instruction}}</td>
-									<td>{{c.multi-engine}}</td>
-									<td>{{c.reactor}}</td>
-									<td>{{c.turbo-propeller}}</td>
-									<td>{{c.aeroApplication}}</td>
-									<td>{{c.real}}</td>
-									<td>{{c.tripulation}}</td>
-									<td>{{c.lastFlight}}</td>
+									<td>{{libroVuelo.airport-day}}</td>
+									<td>{{libroVuelo.airport-night}}</td>
+									<td>{{libroVuelo.landings}}</td>
+									<td>{{libroVuelo.crossing-day}}</td>
+									<td>{{libroVuelo.multi-engine}}</td>
+									<td>{{libroVuelo.reactor}}</td>
+									<td>{{libroVuelo.turbo-propeller}}</td>
+									<td>{{libroVuelo.arial-aplication}}</td>
+									<td>{{libroHorasList.real}}</td>
+									<td>{{libroVuelo.lastFlight}}</td>
 									<td>
-																							<span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
-										<span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span>
+																								<!-- <span class="label label-sm label-success editDir " ng-click="loadFormCustomerAddresses(c.id,c.description,c.street,c.number,c.floor,c.floorid,c.locationid,c.loc_id,c.phone1,c.phone2,c.lat,c.longitud,c.default_address,c.default_address,c.priority)"> Editar </span>&nbsp;
+											<span class="label label-sm label-warning" ng-click="deleteCustomerAddresses(c.id)" id="demo_3"> Borrar </span> -->
 																					</td>
 								</tr>
 
